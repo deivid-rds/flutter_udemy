@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(MaterialApp(
     home: Home(),
   ));
@@ -14,6 +14,17 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      // Scaffold: Muito importante para aplicações com Material Design
+      appBar: AppBar(
+        title: Text("Calculadora de IMC"),
+        centerTitle: true,
+        backgroundColor: Colors.green,
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.refresh), onPressed: () {})  // Icons.refresh
+                                                                   // é o ícone de atualizar
+        ],
+      ),
+    );
   }
 }
